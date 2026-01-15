@@ -1,0 +1,18 @@
+.footer {
+  inline-size: 60%;
+  block-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 32px;
+  border: 1px solid black;
+
+  .toggle {
+    inline-size: 40%;
+    block-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

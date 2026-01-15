@@ -1,0 +1,20 @@
+.appContainer {
+  background-color: lightgray;
+  width: 70vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  padding-block: 12px;
+  padding-inline: auto;
+
+  .taskDetailsContainer {
+    inline-size: 100%;
+    block-size: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,21 @@
+.focusContainer {
+  inline-size: 40%;
+  block-size: 100%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .timerContainer {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+  }
+}
