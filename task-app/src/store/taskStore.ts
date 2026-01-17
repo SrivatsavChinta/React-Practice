@@ -16,6 +16,7 @@ export interface ITaskState {
   mode: TaskMode;
   setMode: () => void;
 
+  taskList: string[];
   totalTasks: number;
   completedTasks: number;
 }
@@ -50,6 +51,7 @@ export const useTaskStore = create<ITaskState>((set) => ({
     set({ mode: taskMode });
   },
 
+  taskList: [],
   totalTasks: 0,
   completedTasks: 0,
 }));
