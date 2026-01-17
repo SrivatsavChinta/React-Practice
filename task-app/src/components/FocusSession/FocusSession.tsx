@@ -18,7 +18,7 @@ export const FocusSession = () => {
     setIntervalId,
   } = useTimeStore();
 
-  const { setMode } = useTaskStore();
+  const { setMode, setStatus } = useTaskStore();
 
   const handlePlayButton = () => {
     if (intervalId !== null) return;
@@ -26,6 +26,7 @@ export const FocusSession = () => {
     const id = setInterval(() => {
       incrementSeconds();
       setMode();
+      setStatus();
     }, 1000);
 
     setIntervalId(id);
@@ -34,12 +35,14 @@ export const FocusSession = () => {
   const handlePauseButton = () => {
     if (intervalId) {
       pauseTimer();
+      setStatus();
     }
   };
 
   const handleStopButton = () => {
     stopTimer();
     setMode();
+    setStatus();
   };
 
   return (

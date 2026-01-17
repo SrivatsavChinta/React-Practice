@@ -2,7 +2,7 @@ import styles from "./TaskOverview.module.scss";
 import { useTaskStore } from "../../store/taskStore";
 
 export const TaskOverview = () => {
-  const { mode, status } = useTaskStore();
+  const { mode, status, totalTasks, completedTasks } = useTaskStore();
 
   return (
     <div className={styles.overviewContainer}>
@@ -14,7 +14,10 @@ export const TaskOverview = () => {
             Status: <span className={styles.statusMode}>{status}</span>
           </li>
           <li>
-            Tasks: <span className={styles.taskProgress}>0 / 0 Done</span>
+            Tasks:{" "}
+            <span className={styles.taskProgress}>
+              {completedTasks} / {totalTasks} Done
+            </span>
           </li>
           <li>
             Mode: <span className={styles.focusMode}>{mode}</span>

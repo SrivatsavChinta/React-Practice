@@ -1,0 +1,17 @@
+.inputBox {
+  inline-size: 90%;
+
+  .input {
+    font-size: 20px;
+    inline-size: 100%;
+  }
+
+  .button {
+    background-color: black;
+    color: white;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+}
