@@ -19,11 +19,23 @@
       padding: 8px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
+      gap: 16px;
 
       .inputBox {
         inline-size: 100%;
+      }
+
+      .taskList {
+        inline-size: 100%;
+        block-size: 100%;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow-y: scroll;
       }
     }
 

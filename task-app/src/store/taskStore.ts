@@ -9,6 +9,13 @@ export type TaskMode =
 
 export type StatusMode = "Active" | "On Hold" | "Away";
 
+export type TaskFilter = "all" | "todo" | "completed";
+
+export interface ITask {
+  completed: boolean;
+  text: string;
+}
+
 export interface ITaskState {
   status: StatusMode;
   setStatus: () => void;
@@ -16,9 +23,15 @@ export interface ITaskState {
   mode: TaskMode;
   setMode: () => void;
 
-  taskList: string[];
   totalTasks: number;
-  completedTasks: number;
+  checkedTasks: number;
+
+  taskList: ITask[];
+  setTaskList: (task: string) => void;
+  toggleTask: (index: number) => void;
+
+  filter: TaskFilter;
+  setFilter: (filter: TaskFilter) => void;
 }
 
 export const useTaskStore = create<ITaskState>((set) => ({
@@ -51,7 +64,28 @@ export const useTaskStore = create<ITaskState>((set) => ({
     set({ mode: taskMode });
   },
 
-  taskList: [],
   totalTasks: 0,
-  completedTasks: 0,
+  checkedTasks: 0,
+
+  taskList: [],
+  setTaskList: (task: string) =>
+    set((state) => ({
+      taskList: [...state.taskList, { completed: false, text: task }],
+      totalTasks: state.totalTasks + 1,
+    })),
+  toggleTask: (index) =>
+    set((state) => {
+      const updatedTasks = [...state.taskList];
+      const isCompleted = updatedTasks[index].completed;
+      updatedTasks[index].completed = !isCompleted;
+      return {
+        taskList: updatedTasks,
+        checkedTasks: isCompleted
+          ? state.checkedTasks - 1
+          : state.checkedTasks + 1,
+      };
+    }),
+
+  filter: "all",
+  setFilter: (filter) => set({ filter }),
 }));
