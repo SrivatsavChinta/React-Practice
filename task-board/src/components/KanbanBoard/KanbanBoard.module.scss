@@ -1,0 +1,42 @@
+.kanbanBoardContainer {
+  inline-size: 1200px;
+  block-size: 1000px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+
+  .taskInputContainer {
+    inline-size: 50%;
+    block-size: 10%;
+  }
+
+  .workFlowStateContainer {
+    block-size: 80%;
+    inline-size: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .workflow {
+      border: 1px solid black;
+      inline-size: 30%;
+      block-size: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 8px;
+
+      .workflowContainer {
+        inline-size: 90%;
+        block-size: 100%;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

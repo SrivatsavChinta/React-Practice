@@ -1,0 +1,35 @@
+.taskCard {
+  inline-size: 90%;
+  block-size: 30%;
+  border: 1px solid black;
+  margin-block-end: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 12px;
+
+  .taskDescriptionContainer {
+    inline-size: 100%;
+    block-size: 50%;
+    padding-inline: 4px;
+
+    .taskDescription {
+      text-align: start;
+    }
+  }
+
+  .taskInfo {
+    inline-size: 100%;
+    block-size: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .taskStatus,
+    .taskTimeStamp {
+      inline-size: 100px;
+      block-size: 48px;
+      border: 1px solid black;
+    }
+  }
+}
