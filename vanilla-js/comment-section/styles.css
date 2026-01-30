@@ -1,0 +1,44 @@
+.comment-box {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+
+.input {
+  width: 600px;
+  height: 40px;
+}
+
+.btn-comment {
+  height: 40px;
+}
+
+.comments {
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment {
+  width: 90%;
+  height: auto;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.btn-reply,
+.btn-edit,
+.btn-delete,
+.btn-reply-comment {
+  height: 30px;
+  width: auto;
+  margin-left: 4px;
+}
+
+.replies {
+  margin-left: 30px;
+  margin-top: 10px;
+}
