@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Checkbox</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <h1>Nested Checkbox</h1>
+
+    <div class="level topLevel">
+      <input
+        type="checkbox"
+        value="Top Level"
+        class="checkbox topLevelCheckbox"
+      />
+      <label for="topLevel" class="label topLevelLabel"> Top Level </label>
+
+      <div class="level midLevel">
+        <input
+          type="checkbox"
+          value="Mid Level"
+          class="checkbox midLevelCheckbox"
+        />
+        <label for="midLevel" class="label midLevelLabel"> Mid Level </label>
+
+        <div class="level lowLevel">
+          <input
+            type="checkbox"
+            value="Low Level"
+            class="checkbox lowLevelCheckbox"
+          />
+          <label for="lowLevel" class="label lowLevelLabel"> Low Level </label>
+        </div>
+
+        <div class="level lowLevel">
+          <input
+            type="checkbox"
+            value="Low Level"
+            class="checkbox lowLevelCheckbox"
+          />
+          <label for="lowLevel" class="label lowLevelLabel"> Low Level </label>
+        </div>
+      </div>
+
+      <div class="level midLevel">
+        <input
+          type="checkbox"
+          value="Mid Level"
+          class="checkbox midLevelCheckbox"
+        />
+        <label for="midLevel" class="label midLevelLabel"> Mid Level </label>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
