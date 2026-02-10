@@ -6,9 +6,9 @@ document.addEventListener("change", (e) => {
 
 function topDown(checkbox) {
   const parent = checkbox.closest(".level");
-  const children = parent.querySelectorAll(".level");
-  children.forEach((child) => {
-    child.querySelector(".checkbox").checked = checkbox.checked;
+  const childCheckboxes = parent.querySelectorAll(".level > .checkbox");
+  childCheckboxes.forEach((child) => {
+    child.checked = checkbox.checked;
   });
 }
 
