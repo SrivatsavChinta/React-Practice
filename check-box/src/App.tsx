@@ -1,10 +1,11 @@
-import { CheckBox } from "./components/CheckBox/CheckBox";
+import { MainPage } from "./components/MainPage/MainPage";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <CheckBox />
+      <h1>Nested Checkboxes</h1>
+      <MainPage />
     </>
   );
 }

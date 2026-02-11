@@ -1,15 +1,21 @@
 import styles from "./Checkbox.module.scss";
 
-export const CheckBox = () => {
+interface ICheckBoxProps {
+  label: string;
+  checked: boolean;
+  onChange: (checked: boolean) => void;
+}
+
+export const CheckBox = ({ label, checked, onChange }: ICheckBoxProps) => {
   return (
-    <div>
-      <div className={styles.topLevelContainer}>
-        <input
-          type="checkbox"
-          className={styles.topCheckBox}
-          value="Top Level"
-        />
-      </div>
+    <div className={styles.item}>
+      <input
+        type="checkbox"
+        className={styles.checkbox}
+        checked={checked}
+        onChange={(e) => onChange(e.target.checked)}
+      />
+      <label className={styles.label}>{label}</label>
     </div>
   );
 };
