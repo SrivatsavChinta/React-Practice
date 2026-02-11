@@ -13,7 +13,7 @@ export const MainPage = () => {
         <CheckBox
           label={checkboxNode.label}
           checked={checkedMap[checkboxNode.id]}
-          onChange={(value) => handleChange(checkboxNode, value)}
+          onChange={(checked) => handleChange(checkboxNode, checked)}
         />
         {checkboxNode.children &&
           checkboxNode.children.map((child) => renderRecursively(child))}
